@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.css">
+  <link rel="stylesheet" href="styles.css">
+  <title>Live Chat</title>
+</head>
+<body>
+  <div id="app" class="container">
+    <div id="messages">
+      <div id="last-message"></div>
+    </div>
+    <form id="chat-form">
+      <div id="input" class="field has-addons">
+        <div class="control is-expanded has-icons-left">
+          <input id="chat-input" class="input is-large is-rounded" type="text" placeholder="Type a message">
+          <span class="icon is-small is-left">
+            <i class="fa fa-comment" aria-hidden="true"></i>
+          </span>
+        </div>
+        <div class="control">
+          <button type="submit" class="button is-large is-rounded is-info">
+            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
+  <script src="bulma-toast.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
